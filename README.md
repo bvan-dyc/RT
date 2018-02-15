@@ -1,5 +1,9 @@
 # RT
-## 42 Graphic Project by cpierre, nthibaud and bvan-dyc
+## 42 Final Graphic Project
+
+*nthibaud, cpierre and bvan-dyc*
+
+Complex Raytracer in C
 
 ### Usage
 ```
