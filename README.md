@@ -1,11 +1,10 @@
 # RT
-## 42 Final Graphic Project
 
-*nthibaud, cpierre and bvan-dyc*
+*by nthibaud, cpierre and bvan-dyc*
 
-Complex Raytracer in C
+Complex Raytracer with multiple features and effects (listed below). Final Project of 42's graphic branch.
 
-### Usage
+## Usage
 ```
 git clone https://github.com/bvan-dyc/RTv1 ~/RTv1
 cd ~/RTv1
@@ -16,7 +15,7 @@ create a new empty map using:	`./rt create <filename>` -> *map is saved in map/*
 
 edit file with:			`./rt edit <filename>`
 
-### Features
+## Features
 
 - Rendering
 	* shapes
