@@ -8,9 +8,7 @@ cd ~/RTv1
 ```
 render a file with: 		`./rt render <filename>`
 
-create a new empty map using:	`./rt create <filename>`
-
-(*map is saved in map/*)
+create a new empty map using:	`./rt create <filename>` -> *map is saved in map/*
 
 edit file with:			`./rt edit <filename>`
 
