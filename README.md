@@ -32,6 +32,7 @@ edit file with:			`./rt edit <filename>`
 		* quadrangle
 		* parallelogram
 	* limited shapes
+	* negative space objects
 	* loading bar
 	* shadows
 	* multiple lights, overlapping shadows
