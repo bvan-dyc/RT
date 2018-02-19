@@ -34,12 +34,6 @@
 			return (PARALLELOGRAM);
 		else if (ft_is_any_string(str, 2, "PYRAMID", "PYR"))
 			return (PYRAMID);
-		else if (ft_is_any_string(str, 2, "ELLIPSOID", "ELI"))
-			return (ELLIPSOID);
-		else if (ft_is_any_string(str, 2, "PARABOLOID", "PARA"))
-			return (PARABOLOID);
-		else if (ft_is_any_string(str, 2, "HYPERBOLOID", "HYP"))
-			return (HYPERBOLOID);
 	else
 	{
 		printf("Object type not recognized, setting to sphere\n");
