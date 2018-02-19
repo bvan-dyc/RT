@@ -14,10 +14,9 @@
 
 t_hit		sub_inter_triangle(t_object *triangle, t_vect ray)
 {
-	t_triter 	m;
+	t_triter	m;
 	t_hit		hit;
 
-	hit.is_hit = 1;
 	ray.ndir = v_norm(ray.dir);
 	m.edge1 = v_sub_a_by_b(triangle->pb, triangle->pa);
 	m.edge2 = v_sub_a_by_b(triangle->pc, triangle->pa);
