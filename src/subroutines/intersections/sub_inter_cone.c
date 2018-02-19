@@ -47,10 +47,7 @@ t_hit		sub_inter_cone(t_object *cone, t_vect ray)
 	inter.c = v_dot(inter.dist, inter.dist) - (1 +
 		pow(tan(cone->radius), 2)) * pow(v_dot(inter.dist, inter.norm), 2);
 	inter.discr = inter.b * inter.b - 4 * inter.a * inter.c;
-	if (inter.discr < 0)
-		hit.is_hit = 0;
-	else
-		hit.is_hit = 1;
+	hit.is_hit = (inter.discr < 0 ? 0 : 1);
 	inter.t0 = (-inter.b + sqrtf(inter.discr)) / (2 * inter.a);
 	inter.t1 = (-inter.b - sqrtf(inter.discr)) / (2 * inter.a);
 	if (inter.t0 > inter.t1)

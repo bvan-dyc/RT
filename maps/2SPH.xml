@@ -22,7 +22,7 @@
 	</lights>
 	<objects>
 		<object>
-			<type>SPH</type>
+			<type>CON</type>
 			<material>DEF</material>
 			<position>0.0,4.0,0.0</position>
 			<radius>1</radius>
