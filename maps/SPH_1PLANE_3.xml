@@ -21,7 +21,7 @@
 			<power>10.0</power>
 			<intensity>0.5</intensity>
 		</light>
-	
+
 	</lights>
 	<objects>
 		<object>
@@ -150,7 +150,7 @@
 		</object>
 
 		<object>
-			<type>SPH</type>
+			<type>CYL</type>
 			<material>REFL</material>
 			<refraction>1.0</refraction>
 			<reflection>0.7</reflection>
@@ -164,7 +164,7 @@
 			<texture></texture>
 		</object>
 		<object>
-			<type>SPH</type>
+			<type>CYL</type>
 			<material>REFL</material>
 			<refraction>1.0</refraction>
 			<reflection>0.7</reflection>
@@ -178,7 +178,7 @@
 			<texture></texture>
 		</object>
 		<object>
-			<type>SPH</type>
+			<type>CYL</type>
 			<material>REFL</material>
 			<refraction>1.0</refraction>
 			<reflection>0.7</reflection>
@@ -192,7 +192,7 @@
 			<texture></texture>
 		</object>
 		<object>
-			<type>SPH</type>
+			<type>CYL</type>
 			<material>REFL</material>
 			<refraction>1.0</refraction>
 			<reflection>0.7</reflection>
@@ -255,7 +255,7 @@
 			<bump>0</bump>
 		</object>
 	<object>
-			<type>SPH</type>
+			<type>CYL</type>
 			<material>REFR</material>
 			<refraction>1.5</refraction>
 			<reflection>0.7</reflection>
@@ -271,15 +271,15 @@
 			<bump>0</bump>
 		</object>
 	<object>
-			<type>CONE</type>
-			<material>REFR</material>
+			<type>CYL</type>
+			<material>REFL</material>
 			<refraction>1.5</refraction>
 			<reflection>0.7</reflection>
 			<refracoef>0.9</refracoef>
 			<position>10.0,-13.0,50.0</position>
 			<direction>0,0,1</direction>
 			<albedo>0.10</albedo>
-			<radius>0.05</radius>
+			<radius>2</radius>
 			<color>0x000000</color>
 			<specsize>20.0</specsize>
 			<specpower>1</specpower>
@@ -297,7 +297,7 @@
 			<direction>0,0,1</direction>
 			<albedo>0.10</albedo>
 			<radius>2</radius>
-			<color>0x000000</color>
+			<color>0xFF0000</color>
 			<specsize>20.0</specsize>
 			<specpower>1</specpower>
 			<texture></texture>

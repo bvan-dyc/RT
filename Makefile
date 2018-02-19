@@ -151,6 +151,7 @@ SRC =	\
 		subroutines/intersections/sub_inter_hyperboloid.c\
 		\
 		subroutines/lights/sub_light_primary_ray.c\
+		subroutines/lights/sub_light_options.c\
 		\
 		editor_start.c\
 		main.c\

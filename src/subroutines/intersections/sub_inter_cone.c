@@ -56,6 +56,7 @@ t_hit		sub_inter_cone(t_object *cone, t_vect ray)
 	if (inter.t0 > inter.t1)
 		ft_doubleswap(&inter.t0, &inter.t1);
 	hit.dist = inter.t0;
+	hit.dist2 = inter.t1;
 	sub_norm_cone(cone, &hit, ray);
 	return (hit);
 }
