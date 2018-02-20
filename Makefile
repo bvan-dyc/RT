@@ -6,7 +6,7 @@
 #    By: nthibaud <nthibaud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/28 11:00:56 by nthibaud          #+#    #+#              #
-#    Updated: 2018/02/07 16:07:46 by nthibaud         ###   ########.fr        #
+#    Updated: 2018/02/20 10:03:26 by nthibaud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ CSDL2_IMAGE = -I ./lib/frameworks/SDL2_image.framework/Headers
 CSDL2_TTFF = -I ./lib/frameworks/SDL2_ttf.framework/Headers
 CSDL2FLAGS = $(CSDL2) $(CSDL2_IMAGE) $(CSDL2_TTFF)
 CFLAGS = $(CHEADERS) $(CSDL2FLAGS) $(CXMLFLAGS)
-#CFLAGS = -Werror -Wextra -Wall $(CHEADERS) $(CSDL2FLAGS) $(CXMLFLAGS)
+CFLAGS = -Werror -Wextra -Wall $(CHEADERS) $(CSDL2FLAGS) $(CXMLFLAGS)
 LDXMLFLAGS = -L/usr/local/lib -lxml2
 LDSDL2 = -framework SDL2
 LDSDL2_IMAGE = -framework SDL2_image
@@ -106,8 +106,6 @@ SRC =	\
 		basic/matrix_handle/m4_mult_v.c\
 		basic/matrix_handle/m4_set_as_default.c\
 		\
-		basic/debug/debug.c\
-		\
 		subroutines/sub_blit_render.c\
 		subroutines/sub_calc_cam_vects.c\
 		subroutines/sub_create_file.c\
@@ -119,6 +117,7 @@ SRC =	\
 		subroutines/sub_texture_sphere.c\
 		subroutines/sub_texture_cone_cyl.c\
 		subroutines/sub_texture_change.c\
+		subroutines/sub_texture_change_perlin.c\
 		subroutines/sub_move_cam_dir.c\
 		subroutines/sub_move_cam_pos.c\
 		subroutines/sub_put_fps.c\
@@ -136,6 +135,8 @@ SRC =	\
 		subroutines/parser/sub_read_hex.c\
 		subroutines/parser/sub_read_pos.c\
 		subroutines/parser/sub_read_texture.c\
+		subroutines/parser/xmlngc.c\
+		subroutines/parser/default_object.c\
 		\
 		subroutines/intersections/sub_inter_plane.c\
 		subroutines/intersections/sub_inter_disk.c\
@@ -147,11 +148,11 @@ SRC =	\
 		subroutines/intersections/sub_inter_pyramid.c\
 		subroutines/intersections/sub_inter_objects.c\
 		subroutines/intersections/sub_inter_paraboloid.c\
-		subroutines/intersections/sub_inter_ellipsoid.c\
 		subroutines/intersections/sub_inter_hyperboloid.c\
 		\
 		subroutines/lights/sub_light_primary_ray.c\
 		subroutines/lights/sub_light_options.c\
+		subroutines/lights/sub_light_compute_color.c\
 		\
 		editor_start.c\
 		main.c\

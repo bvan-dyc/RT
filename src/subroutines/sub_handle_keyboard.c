@@ -5,25 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpierre <cpierre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/11 21:36:54 by cpierre           #+#    #+#             */
-/*   Updated: 2017/12/04 16:52:59 by nthibaud         ###   ########.fr       */
+/*   Created: 2017/10/11 21:18:54 by cpierre           #+#    #+#             */
+/*   Updated: 2018/02/19 21:07:06 by nthibaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rt.h"
 
-void	sub_handle_keyboard(t_kp kp, t_fullmap *map)
+void	sub_handle_keyboard2(t_kp kp, t_fullmap *map, double cspeed,
+		t_vect *cam)
 {
-	t_vect	*cam;
-	static double cspeed = 0.1;
-
-	cam = &map->camera[map->target_cam];
-	if (kp[SDLK_ESCAPE])
-			ft_exit("ESCAPE BUTTON EVENT\n");
-	if (kp[SDLK_r])
-		map->render_key = (map->render_key == 1 ? 0 : 1);
-	if (map->render_key == 1)
-		return;
 	if (kp[SDLK_RIGHT])
 		sub_mv_cdir_add(cam, map->cam_v.right.dir, (cspeed < 1 ? cspeed : 1));
 	if (kp[SDLK_LEFT])
@@ -40,6 +31,21 @@ void	sub_handle_keyboard(t_kp kp, t_fullmap *map)
 		sub_mv_cpos_add(cam, map->cam_v.start.dir, cspeed);
 	if (kp[SDLK_s])
 		sub_mv_cpos_sub(cam, map->cam_v.start.dir, cspeed);
+}
+
+void	sub_handle_keyboard(t_kp kp, t_fullmap *map)
+{
+	t_vect			*cam;
+	static double	cspeed = 0.1;
+
+	cam = &map->camera[map->target_cam];
+	if (kp[SDLK_ESCAPE])
+		ft_exit("ESCAPE BUTTON EVENT\n");
+	if (kp[SDLK_r])
+		map->render_key = (map->render_key == 1 ? 0 : 1);
+	if (map->render_key == 1)
+		return ;
+	sub_handle_keyboard2(kp, map, cspeed, cam);
 	if (kp[SDLK_SPACE])
 		cam->pos.z += cspeed / 10;
 	if (kp[SDLK_x])

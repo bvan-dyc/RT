@@ -6,7 +6,7 @@
 /*   By: cpierre <cpierre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/28 13:15:49 by cpierre           #+#    #+#             */
-/*   Updated: 2018/02/07 15:30:02 by nthibaud         ###   ########.fr       */
+/*   Updated: 2018/02/20 11:37:52 by nthibaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 #include "rt.h"
 
 typedef char*	t_str;
+
+typedef const char*	t_cstr;
 
 typedef unsigned int t_ui;
 
@@ -93,6 +95,8 @@ typedef enum	e_obj_t
 	QUADRANGLE = 7,
 	PYRAMID = 8,
 	PARALLELOGRAM = 9,
+	PARABOLOID = 10,
+	HYPERBOLOID = 11,
 }				t_obj_t;
 
 typedef struct	s_inter
@@ -192,6 +196,7 @@ typedef	struct	s_hit
 	double		dist2;
 	int			is_hit;
 	t_3d_double	rgb_color;
+	t_3d_double	intensity;
 }				t_hit;
 
 typedef struct	s_SDL_Bundle
@@ -224,6 +229,8 @@ typedef struct	s_fullmap
 	double		shadowcoef;
 	int			*perlin_tab;
 	double		color_saturation;
+	t_ui			col;
+	int				o;
 }				t_fullmap;
 
 typedef struct s_zone_pos
@@ -247,6 +254,7 @@ typedef struct s_rend_zone
 typedef struct	s_noise
 {
 	int 		tab[512];
+	int			i;
 	int 		cx;
 	int 		cy;
 	int 		cz;
@@ -261,7 +269,6 @@ typedef struct	s_noise
 	int 		ba;
 }				t_noise;
 
-typedef t_hit	(*t_isect_fnc_tab[12])(t_object *obj, t_vect ray);
 typedef	t_ui	(*t_texture_ft_tab[3])(t_hit hit);
 
 #endif

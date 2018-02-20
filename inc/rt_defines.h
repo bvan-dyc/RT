@@ -6,7 +6,7 @@
 /*   By: cpierre <cpierre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/28 11:20:08 by cpierre           #+#    #+#             */
-/*   Updated: 2018/01/23 17:09:17 by nthibaud         ###   ########.fr       */
+/*   Updated: 2018/02/20 09:37:20 by nthibaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,23 +18,23 @@
 # define EDITOR_IMG_WIDTH 128
 # define EDITOR_IMG_HEIGHT 80
 
-# define EDITOR_WIN_WIDTH 990
-# define EDITOR_WIN_HEIGHT 850
+# define EDITOR_WIN_WIDTH 1000
+# define EDITOR_WIN_HEIGHT 800
 
-# define RENDER_WIN_WIDTH 1280
+# define RENDER_WIN_WIDTH 1000
 # define RENDER_WIN_HEIGHT 800
 
 # define OPT_WIN_W 400
 # define OPT_WIN_H 850
 
 # define NULL_POS (t_3d_double){0, 0, 0}
-# define NULL_VECT (t_vect){NULL_POS, NULL_POS}
+# define NULL_VECT (t_vect){NULL_POS, NULL_POS, NULL_POS}
 # define NULL_HIT (t_hit){NULL_POS, NULL_POS, NULL_VECT, NULL, -1}
 
 # define RENDER_DIST 1000000000
 
 # define PI 			3.14159265359
-# define EPSILON 		0.000001
+# define EPSILON 		0.00001
 # define BIAS			0.00001
 
 # define NOFILTER 		0
@@ -62,7 +62,10 @@
 # define YES 			1
 # define NO 			0
 
-# define THREADS_NB		20
+# define DBMIN 	        -1.7976931348623158e+308
+# define DBMAX 	        1.7976931348623158e+308
+
+# define THREADS_NB		100
 
 # define ERR_USAGE "usage: ./rt mode file\n  mode: render/edit/create"
 

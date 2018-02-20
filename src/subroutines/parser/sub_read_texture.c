@@ -6,7 +6,7 @@
 /*   By: cpierre <cpierre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/20 14:56:42 by cpierre           #+#    #+#             */
-/*   Updated: 2017/10/20 15:20:35 by cpierre          ###   ########.fr       */
+/*   Updated: 2018/02/19 17:19:38 by cpierre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,6 @@ SDL_Surface	*sub_read_texture(t_str file)
 
 	out = IMG_Load(file);
 	if (!out)
-	{
-		printf("could not read '%s', no texture set\n", file);
 		return (NULL);
-	}
-	else
-		printf("texture set to '%s'\n", file);
 	return (out);
 }

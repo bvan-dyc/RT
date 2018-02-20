@@ -6,7 +6,7 @@
 /*   By: nthibaud <nthibaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/22 12:02:51 by nthibaud          #+#    #+#             */
-/*   Updated: 2018/02/07 16:06:59 by nthibaud         ###   ########.fr       */
+/*   Updated: 2018/02/20 10:10:03 by nthibaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,8 @@ void			join_threads(pthread_t *threads, t_rend_zone *zone_tab,
 		t_SDL_Bundle b);
 void			create_threads(t_rend_zone *zone_tab, int i,
 		pthread_t *threads);
+char			*xmlngc(const xmlNode *cur);
+void			default_object(t_object *obj, int o_nb);
 
 /*
 **	Intersections
@@ -78,14 +80,16 @@ t_hit			sub_inter_aabbbox(t_object *cube, t_vect ray);
 t_hit			sub_inter_pyramid_tbase(t_object *pyramid, t_vect ray);
 t_hit			sub_inter_paraboloid(t_object *quad, t_vect ray);
 t_hit			sub_inter_hyperboloid(t_object *cube, t_vect ray);
-t_hit			sub_inter_ellipsoid(t_object *pyramid, t_vect ray);
 
 /*
 **	Lights
 */
-t_3d_double	    sub_light_primary_ray(t_fullmap *map, t_hit hit, t_vect *ray, int depth);
-void            sub_perturb_normal(t_hit *hit, int *perlin_map);
-t_3d_double     sub_refraction(t_fullmap *map, t_hit hit, t_vect *ray, int depth);
+t_3d_double		sub_light_primary_ray(t_fullmap *map, t_hit hit,
+		t_vect *ray, int depth);
+t_3d_double		sub_light_compute_color(t_fullmap *map, t_hit hit,
+		t_light light, t_vect *ray);
+void            sub_perturb_normal(t_hit *hit, int *perlinmp);
+t_3d_double     sub_refr(t_fullmap *map, t_hit hit, t_vect *ray, int depth);
 t_3d_double     sub_reflection(t_fullmap *map, t_hit hit, t_vect *ray, int depth);
 t_3d_double     rt_refract(t_vect ray, t_hit hit, double *refraction);
 void            fresnel(t_vect ray, t_hit hit, double *refraction, double *kr);

@@ -6,7 +6,7 @@
 /*   By: bvan-dyc <bvan-dyc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 12:06:00 by bvan-dyc          #+#    #+#             */
-/*   Updated: 2017/12/04 15:55:41 by bvan-dyc         ###   ########.fr       */
+/*   Updated: 2018/02/20 09:35:08 by nthibaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void		sub_norm_cylinder(t_object *cyl, t_hit *hit, t_vect ray)
 {
 	t_3d_double		dist;
 	t_3d_double		temp;
-	t_3d_double		norm;
 	t_3d_double		temp2;
 
 	hit->pos = v_sum(ray.pos, v_mult_by_nb(ray.ndir, hit->dist));
@@ -35,8 +34,8 @@ t_hit		sub_inter_cylinder(t_object *cyl, t_vect ray)
 	t_hit			hit;
 	t_inter			inter;
 
+	hit.is_hit = 1;
 	ray.ndir = v_norm(ray.dir);
-	hit.is_hit = 0;
 	inter.dist = v_sub_a_by_b(ray.pos, cyl->pos);
 	inter.norm = v_norm(cyl->dir);
 	inter.a = v_dot(ray.dir, ray.dir) - pow(v_dot(ray.dir, inter.norm), 2);
@@ -47,8 +46,6 @@ t_hit		sub_inter_cylinder(t_object *cyl, t_vect ray)
 	inter.discr = inter.b * inter.b - 4 * inter.a * inter.c;
 	if (inter.discr < 0)
 		hit.is_hit = 0;
-	else
-		hit.is_hit = 1;
 	inter.t0 = (-inter.b + sqrtf(inter.discr)) / (2 * inter.a);
 	inter.t1 = (-inter.b - sqrtf(inter.discr)) / (2 * inter.a);
 	if (inter.t0 > inter.t1)

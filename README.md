@@ -1,48 +1,75 @@
 # RT
+## 42 Graphic Project	by cpierre
 
-*by nthibaud, cpierre and bvan-dyc*
+### User-side features:
+- [ ] 3 different file formats are handled
+    * [ ] .rt
+    * [ ] .xml
+    * [ ] .json
 
-Complex Raytracer with multiple features and effects (listed below). Final Project of 42's graphic branch.
+- [ ] can create a new empty map using `./rt create <filename>`
+    * [ ] fills it with basic stuff
+    * [x] saves it in maps folder
 
-## Usage
-```
-git clone https://github.com/bvan-dyc/RTv1 ~/RTv1
-cd ~/RTv1
-```
-render a file with: 		`./rt render <filename>`
-create a new empty map using:	`./rt create <filename>` -> *map is saved in map/*
-move around rendered file with:	`./rt edit <filename>`
+- [ ] can render a file with `./rt render <filename>`
+	* [ ] while rendering, loading bar
+	* [ ] full render
+		* [ ] basic shapes
+			* [ ] plane
+			* [ ] sphere
+			* [ ] cylinder
+			* [ ] cone
+		* [ ] composed shapes
+			* [ ] simple face
+			* [ ] multi-face objects
+		* [ ] shadows
+			* [ ] multiple lights
+			* [ ] smooth effect
+		* [ ] texture mapping
+			* [ ] .jpeg
+			* [ ] .bmp
+			* [ ] .png
+		* [ ] bump mapping
+		* [ ] ambient occlusion
+		* [ ] reflexions
+		* [ ] transparency
+		* [ ] render image saving
+		* [ ] multiple camera movie rendering
+		* [ ] skybox
+		* [ ] fog
+		* [ ] radiance
 
-## Features
-
-- Rendering
-	* shapes
-		* plane
-		* sphere
-		* cylinder
-		* cone
-		* disk
-		* triangle
-		* hyperboloid
-		* paraboloid
-		* pyramid
-		* quadrangle
-		* parallelogram
-	* limited shapes
-	* negative space objects
-	* loading bar
-	* shadows
-	* multiple lights, overlapping shadows
-	* ambient light
-	* specular light
-	* reflexions
-	* refractions
-	* transparency
-	* texture mapping (.jpeg / .png / .bmp)
-	* procedural textures (perlin, marble, chess)
-	* procedural bump mapping (perlin noise)
-	* filters (cellshading, smooth, grayscale, sepia, inverted)
-	* skybox
-	* render image saving
-	* multithreading
-	
+- [ ] can edit file with `./rt edit <filename>`
+	* [ ] file save ability at any time
+	* [ ] ability to affect multiple render variables
+		* [ ] ambient occlusion
+		* [ ] skybox texture
+		* [ ] radiance
+			* [ ] on / off
+			* [ ] radiance power
+			* [ ] radiance iterations
+		* [ ] objects
+			* [ ] ability to interact with any object by selecting it with mouse
+				* [ ] for each selected object, a window to change object settings
+			* [ ] cameras
+				* [ ] camera fov
+					* [ ] real-time with mouse wheel
+				* [ ] camera position
+					* [ ] real-time positioning with keyboard
+				* [ ] camera angle
+					* [ ] real-time positioning with mouse
+				* [ ] camera count
+					* [ ] add/delete with key up/down
+					* [ ] move through cameras with key left/right
+			* [ ] lights
+				* [ ] light position
+				* [ ] light count
+			* [ ] shapes
+				* [ ] shape count
+				* [ ] shape type
+				* [ ] shape position
+				* [ ] shape rotations
+				* [ ] shape reflexion index
+				* [ ] shape transparency index
+				* [ ] shape texture
+				* [ ] shape bump-map
