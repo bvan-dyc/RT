@@ -10,10 +10,8 @@ git clone https://github.com/bvan-dyc/RTv1 ~/RTv1
 cd ~/RTv1
 ```
 render a file with: 		`./rt render <filename>`
-
 create a new empty map using:	`./rt create <filename>` -> *map is saved in map/*
-
-edit file with:			`./rt edit <filename>`
+move around rendered file with:	`./rt edit <filename>`
 
 ## Features
 
@@ -25,7 +23,6 @@ edit file with:			`./rt edit <filename>`
 		* cone
 		* disk
 		* triangle
-		* ellipsoid
 		* hyperboloid
 		* paraboloid
 		* pyramid
