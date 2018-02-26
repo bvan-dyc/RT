@@ -8,6 +8,7 @@ Complex Raytracer with multiple features and effects (listed below). Final Proje
 ```
 git clone https://github.com/bvan-dyc/RTv1 ~/RTv1
 cd ~/RTv1
+make
 ```
 render a file with: 		`./rt render <filename>`
 
