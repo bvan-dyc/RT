@@ -10,9 +10,12 @@ git clone https://github.com/bvan-dyc/RTv1 ~/RTv1
 cd ~/RTv1
 ```
 render a file with: 		`./rt render <filename>`
+
 create a new empty map using:	`./rt create <filename>` -> *map is saved in map/*
+
 move around rendered file with:	`./rt edit <filename>`
-switch between render and edit with 'r'
+
+switch between render and edit with `r`
 
 ![rt6sP1CoCyPerl](https://preview.ibb.co/iYdZdH/Screen_Shot_2018_02_26_at_11_58_43.png "Render example")
 
