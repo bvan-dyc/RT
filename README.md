@@ -46,4 +46,4 @@ move around rendered file with:	`./rt edit <filename>`
 	* render image saving
 	* multithreading
 	
-![rt6sP1CoCyPerl](https://imgur.com/a/LDMRq "Render example")
+![rt6sP1CoCyPerl](https://preview.ibb.co/iYdZdH/Screen_Shot_2018_02_26_at_11_58_43.png "Render example")
